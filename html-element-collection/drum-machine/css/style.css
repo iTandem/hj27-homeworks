@@ -3,9 +3,8 @@ body {
   justify-content: center;
   min-height: 100vh;
   align-items: center;
-  background: url('../i/drum-machine.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-size: cover;
+    background: url('../i/drum-machine.jpeg') no-repeat;
 }
 
 .drum-kit {
