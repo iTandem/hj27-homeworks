@@ -1,3 +1,5 @@
+'use strict';
+
 let container;
 
 function loadContacts() {
@@ -25,7 +27,7 @@ function backClick() {
   container.classList.remove('details');
   const items = document.querySelectorAll('.list-view li');
   for (let item of items) {
-      item.classList.remove('active');
+    item.classList.remove('active');
   }
 }
 
@@ -35,4 +37,15 @@ function init() {
   container.querySelector('.back').addEventListener('click', backClick);
 }
 
+const list = document.querySelector('#container .list-view .contacts-list');
+
+function contactsBook() {
+  const contacts = JSON.parse(loadContacts());
+  list.innerHTML = '';
+  for (let contact of contacts) {
+    list.innerHTML += `<li data-email="${contact.email}" data-phone="${contact.phone}"><strong>${contact.name}</strong></li>`;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', contactsBook);
