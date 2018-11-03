@@ -39,7 +39,7 @@ function init() {
 
 const list = document.querySelector('#container .list-view .contacts-list');
 
-function contactsBook() {
+function createContactsList() {
   const contacts = JSON.parse(loadContacts());
   list.innerHTML = '';
   for (let contact of contacts) {
@@ -48,4 +48,4 @@ function contactsBook() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
-document.addEventListener('DOMContentLoaded', contactsBook);
+document.addEventListener('DOMContentLoaded', createContactsList);
