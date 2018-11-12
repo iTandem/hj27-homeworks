@@ -11,6 +11,8 @@ function toggleMenu(event) {
 }
 
 function openLink(event) {
+  event.preventDefault();
+  event.stopPropagation();
   console.log(this.textContent);
 }
 
@@ -25,10 +27,6 @@ function initLink(node) {
   node.addEventListener('click', openLink);
 }
 
-Array
-  .from(document.querySelectorAll('.dropdown'))
-  .forEach(init);
+Array.from(document.querySelectorAll('.dropdown')).forEach(init);
 
-Array
-  .from(document.querySelectorAll('a'))
-  .forEach(initLink);
+Array.from(document.querySelectorAll('a')).forEach(initLink);
