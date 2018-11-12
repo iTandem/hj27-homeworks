@@ -15,6 +15,7 @@ function onLoad() {
   try {
     const data = JSON.parse(xhr.responseText);
 
+    // noinspection JSAnnotator
     function currencyCalc() {
       const fromCurrency = data.find((el) => {
         return el.code === from.value
