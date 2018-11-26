@@ -32,10 +32,10 @@ function moveSlide(slider) {
   currentSlide.classList.remove('slide-current');
   activatedSlide.classList.add('slide-current');
 
-  nextBtn.classList.toggle('disabled', activatedSlide.nextElementSibling == null);
-  lastBtn.classList.toggle('disabled', activatedSlide.nextElementSibling == null);
-  prevBtn.classList.toggle('disabled', activatedSlide.previousElementSibling == null);
-  firstBtn.classList.toggle('disabled', activatedSlide.previousElementSibling == null);
+  nextBtn.classList.toggle('disabled', activatedSlide.nextElementSibling === null);
+  lastBtn.classList.toggle('disabled', activatedSlide.nextElementSibling === null);
+  prevBtn.classList.toggle('disabled', activatedSlide.previousElementSibling === null);
+  firstBtn.classList.toggle('disabled', activatedSlide.previousElementSibling === null);
 
   currentSlide = activatedSlide;
 }
